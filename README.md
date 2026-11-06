@@ -7,6 +7,7 @@
 <p align="center">
   <a href="https://www.npmjs.com/package/@runewright/skills"><img src="https://img.shields.io/npm/v/@runewright/skills" alt="npm"></a>
   <a href="https://github.com/ygreat/RuneWright-Skills/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/@runewright/skills" alt="license"></a>
+  <a href="http://dsc.gg/runewright"><img src="https://img.shields.io/badge/Discord-join-5865F2?logo=discord&logoColor=white" alt="Discord"></a>
 </p>
 
 <p align="center">
@@ -115,6 +116,10 @@ with Gravity Co., Ltd., Lee Myoungjin, or the rAthena development team.
 
 Issues and pull requests are welcome. See
 [CONTRIBUTING.md](https://github.com/ygreat/RuneWright-Skills/blob/main/CONTRIBUTING.md).
+
+## Community
+
+Join the Discord: [dsc.gg/runewright](http://dsc.gg/runewright)
 
 ## License
 
