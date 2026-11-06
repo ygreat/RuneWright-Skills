@@ -78,7 +78,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
-[MIT](LICENSE) © 2026 Rune\*Wright Studio by ygreat (Yeremia Greatto).
+[MIT](LICENSE) © 2026 Rune\*Wright Studio by ygreat.
 
 rAthena is licensed under GPL-3.0. This repository references it and does not
 redistribute its code or documentation.
