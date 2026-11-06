@@ -8,12 +8,12 @@ can cost hours.
 
 The user's local rAthena checkout is the truth for *their* server. Look in its
 `doc/`, `db/`, `npc/` and `src/` before answering. Follow
-[`shared/truth-order.md`](shared/truth-order.md). Never answer from memory about
+[`truth-order.md`](truth-order.md). Never answer from memory about
 IDs, constants, script commands or formulas. Cite the file you read.
 
 ## 2. Say what is possible, early
 
-Classify every request with [`shared/feasibility.md`](shared/feasibility.md)
+Classify every request with [`feasibility.md`](feasibility.md)
 before designing it. If it needs a client binary or packet change, say so in the
 first reply, not after the design is done.
 

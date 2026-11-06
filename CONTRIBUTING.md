@@ -14,13 +14,13 @@ Thanks for helping make RO server development easier.
    ---
    ```
    Make the description trigger-rich: list the phrases a user would say.
-3. Keep `SKILL.md` short. Put long material in `skills/<name>/references/` and
+3. Reference shared files as `../runewright-shared/<file>.md` (valid in this repo and after install). Keep `SKILL.md` short. Put long material in `skills/<name>/references/` and
    link it so the agent loads it on demand.
 4. Start by reading `.runewright/profile.md`, and follow
-   [PRINCIPLES.md](PRINCIPLES.md) and [`shared/`](shared/).
-5. Classify the request with [`shared/feasibility.md`](shared/feasibility.md)
-   and cite the files you read ([`shared/truth-order.md`](shared/truth-order.md)).
-6. Add repeatable traps to [`shared/gotchas.md`](shared/gotchas.md).
+   [principles](skills/runewright-shared/principles.md) and the files in [`skills/runewright-shared/`](skills/runewright-shared/).
+5. Classify the request with [`runewright-shared/feasibility.md`](skills/runewright-shared/feasibility.md)
+   and cite the files you read ([`runewright-shared/truth-order.md`](skills/runewright-shared/truth-order.md)).
+6. Add repeatable traps to [`runewright-shared/gotchas.md`](skills/runewright-shared/gotchas.md).
 
 ## Ground rules
 

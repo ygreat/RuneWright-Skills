@@ -21,9 +21,9 @@ Design goals:
 - **Project agnostic.** Skills adapt to your server through a project profile
   (mechanics, packetver, rates, caps, conventions).
 - **rAthena docs are the source of truth.** Your local checkout first, upstream
-  second. See [`shared/truth-order.md`](shared/truth-order.md).
+  second. See [`truth-order.md`](skills/runewright-shared/truth-order.md).
 - **Honest about limits.** Every request is classified by
-  [feasibility layer](shared/feasibility.md), from script-only to
+  [feasibility layer](skills/runewright-shared/feasibility.md), from script-only to
   client-binary-only.
 - **Friendly to newcomers.** `ro-create` takes you from nothing to a running
   local server with a short tutorial of the RO dev workflow.
@@ -53,10 +53,10 @@ Planned categories (details in the [roadmap](docs/ROADMAP.md)):
 ## Repository layout
 
 ```
-PRINCIPLES.md     behavioral rules every skill inherits
-shared/           references reused by skills (truth order, profile schema,
-                  feasibility, client compatibility, gotchas)
+bin/              the npx installer CLI
 skills/           one folder per skill, each with a SKILL.md
+  runewright-shared/   references every skill uses: principles, truth order,
+                       profile schema, feasibility, client compatibility, gotchas
 docs/             roadmap and project docs
 ```
 
