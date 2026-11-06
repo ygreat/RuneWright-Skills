@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Agent skills for rAthena Ragnarok Online server development: a designer x engineer partner for server owners and developers.",
   "license": "MIT",
-  "author": "Yeremia Greatto <ygreatto@gmail.com> (https://github.com/ygreat)",
+  "author": "ygreat (https://github.com/ygreat)",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ygreat/RuneWright-Skills.git"
