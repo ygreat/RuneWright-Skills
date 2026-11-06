@@ -4,7 +4,7 @@
 A designer x engineer partner for RO server owners and developers: it thinks
 like a game designer and solves problems like an engineer.
 
-> Status: early scaffolding (v0.0.x). The foundations are in place; skills ship
+> Status: early preview (v0.0.x). The installer and the first seven skills exist; more ship
 > incrementally. See the [roadmap](docs/ROADMAP.md).
 
 Created by **Rune\*Wright Studio by ygreat**.
@@ -30,7 +30,7 @@ Design goals:
 
 ## Install
 
-> The CLI is not published yet. The target experience:
+> Not yet published to npm. Once it is:
 
 ```sh
 npx @runewright/skills install

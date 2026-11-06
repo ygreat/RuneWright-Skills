@@ -1,6 +1,6 @@
 # Roadmap
 
-Status: `planned` until a skill ships in `skills/`.
+Status: the v0.1 skills below exist in `skills/` as drafts and need real-world testing against a live rAthena checkout before a release. Everything under "Later" is planned.
 
 ## v0.1: vertical slice
 
