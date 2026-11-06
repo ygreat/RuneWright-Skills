@@ -1,0 +1,16 @@
+{
+  "name": "@runewright/skills",
+  "version": "0.0.1",
+  "description": "Agent skills for rAthena Ragnarok Online server development: a designer x engineer partner for server owners and developers.",
+  "license": "MIT",
+  "author": "Yeremia Greatto <ygreatto@gmail.com> (https://github.com/ygreat)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ygreat/RuneWright-Skills.git"
+  },
+  "homepage": "https://github.com/ygreat/RuneWright-Skills#readme",
+  "bugs": "https://github.com/ygreat/RuneWright-Skills/issues",
+  "keywords": ["rathena", "ragnarok", "ragnarok-online", "agent-skills", "claude", "codex", "cursor", "gemini", "copilot"],
+  "engines": { "node": ">=18" },
+  "files": ["skills", "shared", "PRINCIPLES.md", "README.md", "LICENSE"]
+}
