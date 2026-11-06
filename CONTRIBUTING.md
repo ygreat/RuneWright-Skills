@@ -35,3 +35,20 @@ Thanks for helping make RO server development easier.
 - Small, focused commits with messages describing the resulting behavior.
 - Do not rewrite shared history.
 - Describe what you verified in the PR.
+
+## Releasing (maintainers)
+
+Pushing to `main` updates GitHub only. npm (including the README shown on its
+page) changes only when a new version is published, and a version number can
+never be reused. Publishing is automated by
+[`.github/workflows/publish.yml`](.github/workflows/publish.yml):
+
+1. Make sure `main` is green and the README is current.
+2. Bump the version: `npm version 0.1.0 --no-git-tag-version`, commit it.
+3. Tag and push: `git tag v0.1.0 && git push origin main --tags`.
+4. The workflow checks the tag matches `package.json`, smoke-tests the CLI,
+   and publishes with provenance. Tags containing a dash (`v0.2.0-beta.1`)
+   publish under the `next` dist-tag instead of `latest`.
+
+One-time setup: add an npm automation token as the repository secret
+`NPM_TOKEN` (GitHub repo -> Settings -> Secrets and variables -> Actions).

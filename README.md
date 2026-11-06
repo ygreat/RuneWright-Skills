@@ -1,11 +1,16 @@
 # Rune*Wright Skills
 
+[![npm](https://img.shields.io/npm/v/@runewright/skills)](https://www.npmjs.com/package/@runewright/skills)
+[![license](https://img.shields.io/npm/l/@runewright/skills)](https://github.com/ygreat/RuneWright-Skills/blob/main/LICENSE)
+
 **Agent skills for [rAthena](https://github.com/rathena/rathena) Ragnarok Online server development.**
 A designer x engineer partner for RO server owners and developers: it thinks
 like a game designer and solves problems like an engineer.
 
-> Status: early preview (v0.0.x). The installer and 21 draft skills exist; they are being tested and refined as they ship
-> incrementally. See the [roadmap](docs/ROADMAP.md).
+> **Status: early preview (v0.0.x).** 21 draft skills and the installer exist.
+> They are written from the rAthena docs and are being tested against real
+> checkouts; expect rough edges and please report them.
+> See the [roadmap](https://github.com/ygreat/RuneWright-Skills/blob/main/docs/ROADMAP.md).
 
 Created by **Rune\*Wright Studio by ygreat**.
 
@@ -16,32 +21,61 @@ Cursor, Gemini CLI, Copilot and others). Each skill does one job, asks for the
 details it needs once, checks your own rAthena checkout as the source of truth,
 and tells you early what is and is not possible.
 
-Design goals:
-
 - **Project agnostic.** Skills adapt to your server through a project profile
   (mechanics, packetver, rates, caps, conventions).
-- **rAthena docs are the source of truth.** Your local checkout first, upstream
-  second. See [`truth-order.md`](skills/runewright-shared/truth-order.md).
+- **rAthena is the source of truth.** Your local checkout first, upstream
+  second ([truth order](https://github.com/ygreat/RuneWright-Skills/blob/main/skills/runewright-shared/truth-order.md)).
 - **Honest about limits.** Every request is classified by
-  [feasibility layer](skills/runewright-shared/feasibility.md), from script-only to
-  client-binary-only.
+  [feasibility layer](https://github.com/ygreat/RuneWright-Skills/blob/main/skills/runewright-shared/feasibility.md),
+  from script-only (L1) to client-binary-only (L5).
 - **Friendly to newcomers.** `ro-create` takes you from nothing to a running
-  local server with a short tutorial of the RO dev workflow.
+  local server, with a short tutorial of the RO dev workflow.
 
 ## Install
 
-> Not yet published to npm. Once it is:
+Requires Node.js 18 or newer.
 
 ```sh
 npx @runewright/skills install
 ```
 
-It will detect your agents and install the skills in the right place for each
-(for example `.claude/skills/`, `.agents/skills/`), project-local or global.
+The installer detects your agents (or asks) and copies the skills to the right
+place for each, project-local by default:
+
+| Agent | Project folder |
+| --- | --- |
+| Claude Code | `.claude/skills/` |
+| Codex | `.agents/skills/` |
+| Cursor | `.cursor/skills/` |
+| Gemini CLI | `.gemini/skills/` |
+| GitHub Copilot | `.github/skills/` |
+
+```sh
+npx @runewright/skills install --agent claude,codex   # pick agents
+npx @runewright/skills install --global               # your home folder
+npx @runewright/skills install --dry-run              # preview only
+npx @runewright/skills list                           # show bundled skills
+npx @runewright/skills update                         # refresh installed skills
+npx @runewright/skills uninstall                      # remove what it installed
+npx @runewright/skills doctor                         # check install health
+```
+
+The installer only updates or removes folders it created; it never overwrites
+a skill folder it did not install unless you pass `--force`. Restart your
+agent after installing.
+
+## Quick start
+
+1. Install the skills in your project folder.
+2. New to RO servers? Ask your agent: *"Create a new RO server project here."*
+   (`ro-create`).
+3. Already have a rAthena checkout? Ask: *"Set up Runewright for this
+   project."* (`runewright-setup`). It writes `.runewright/profile.md`, which
+   every other skill reads first.
+4. Then just work: *"Add a healer NPC in Prontera"*, *"Is this boss too
+   strong?"*, *"How does the exp rate get applied?"*
 
 ## Skills
-
-All skills below exist as drafts and are being tested against real rAthena checkouts (see the [roadmap](docs/ROADMAP.md)):
 
 | Category | Skills |
 | --- | --- |
@@ -50,15 +84,17 @@ All skills below exist as drafts and are being tested against real rAthena check
 | Engineering | `runewright-explain`, `ro-create-npc`, `ro-create-item`, `ro-create-mob`, `ro-create-quest`, `ro-db-edit`, `ro-source-modification`, `ro-client-files`, `ro-testing`, `ro-git` |
 | Server | `ro-serverops`, `ro-deployplan` |
 
-## Repository layout
+Run `npx @runewright/skills list` for one-line descriptions.
 
-```
-bin/              the npx installer CLI
-skills/           one folder per skill, each with a SKILL.md
-  runewright-shared/   references every skill uses: principles, truth order,
-                       profile schema, feasibility, client compatibility, gotchas
-docs/             roadmap and project docs
-```
+## How it works
+
+- Skills are plain Markdown (`SKILL.md`) with a trigger-rich description, so
+  agents load them when your request matches.
+- Shared references (principles, truth order, project profile schema,
+  feasibility layers, client compatibility, gotchas) live in
+  `skills/runewright-shared/` and are installed alongside the skills.
+- Skills never invent IDs, constants or formulas; they read your checkout and
+  cite the files.
 
 ## Platforms
 
@@ -74,11 +110,12 @@ with Gravity Co., Ltd., Lee Myoungjin, or the rAthena development team.
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md).
+Issues and pull requests are welcome. See
+[CONTRIBUTING.md](https://github.com/ygreat/RuneWright-Skills/blob/main/CONTRIBUTING.md).
 
 ## License
 
-[MIT](LICENSE) © 2026 Rune\*Wright Studio by ygreat.
+[MIT](https://github.com/ygreat/RuneWright-Skills/blob/main/LICENSE) © 2026 Rune\*Wright Studio by ygreat.
 
 rAthena is licensed under GPL-3.0. This repository references it and does not
 redistribute its code or documentation.
