@@ -4,7 +4,7 @@
 A designer x engineer partner for RO server owners and developers: it thinks
 like a game designer and solves problems like an engineer.
 
-> Status: early preview (v0.0.x). The installer and the first seven skills exist; more ship
+> Status: early preview (v0.0.x). The installer and 21 draft skills exist; they are being tested and refined as they ship
 > incrementally. See the [roadmap](docs/ROADMAP.md).
 
 Created by **Rune\*Wright Studio by ygreat**.
@@ -41,13 +41,13 @@ It will detect your agents and install the skills in the right place for each
 
 ## Skills
 
-Planned categories (details in the [roadmap](docs/ROADMAP.md)):
+All skills below exist as drafts and are being tested against real rAthena checkouts (see the [roadmap](docs/ROADMAP.md)):
 
 | Category | Skills |
 | --- | --- |
 | Setup | `runewright-setup`, `ro-create`, `ro-upgrade`, `ro-troubleshoot` |
 | Concepting | `ro-writing`, `ro-balancing`, `ro-economy`, `ro-questdesign`, `ro-spec` |
-| Engineering | `runewright-explain`, `ro-create-npc`, `ro-create-item`, `ro-create-mob`, `ro-db-edit`, `ro-source-modification`, `ro-testing`, `ro-git` |
+| Engineering | `runewright-explain`, `ro-create-npc`, `ro-create-item`, `ro-create-mob`, `ro-create-quest`, `ro-db-edit`, `ro-source-modification`, `ro-client-files`, `ro-testing`, `ro-git` |
 | Server | `ro-serverops`, `ro-deployplan` |
 
 ## Repository layout

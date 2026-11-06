@@ -1,29 +1,20 @@
 # Roadmap
 
-Status: the v0.1 skills below exist in `skills/` as drafts and need real-world testing against a live rAthena checkout before a release. Everything under "Later" is planned.
+All skills below exist in `skills/` as **drafts**. They are written from the rAthena docs and general knowledge and have not yet been validated against a live checkout; each skill tells the agent to verify file names, keys and commands locally. Testing feedback drives the next releases.
 
-## v0.1: vertical slice
+## Draft skills
 
-| Skill | Category | Purpose |
-| --- | --- | --- |
-| `runewright-setup` | Setup | Install the collection, write the project profile, set preferences |
-| `ro-create` | Setup | Guided new-project wizard: prerequisites, DB, build, client, first boot, tutorial |
-| `runewright-explain` | Engineering | Explain how something works in rAthena or in this project, with citations |
-| `ro-create-npc` | Engineering | Intake, script, validate, and reload an NPC |
-| `ro-db-edit` | Engineering | Safe edits to item/mob/skill/quest DBs via import overrides |
-| `ro-git` | Engineering | Focused commits, safe staging, no history rewrites |
-| `ro-testing` | Engineering | Isolated server startup, reload, log check, in-game test plan |
+| Category | Skills |
+| --- | --- |
+| Setup | `runewright-setup`, `ro-create`, `ro-upgrade`, `ro-troubleshoot` |
+| Concepting | `ro-writing`, `ro-balancing`, `ro-economy`, `ro-questdesign`, `ro-spec` |
+| Engineering | `runewright-explain`, `ro-create-npc`, `ro-create-item`, `ro-create-mob`, `ro-create-quest`, `ro-db-edit`, `ro-source-modification`, `ro-client-files`, `ro-testing`, `ro-git` |
+| Server | `ro-serverops`, `ro-deployplan` |
 
-Plus: shared references, `@runewright/skills` CLI (`install`, `list`, `update`, `doctor`).
+## Next
 
-## Later
-
-**Setup:** `ro-upgrade` (merge upstream rAthena into a customized fork), `ro-troubleshoot`.
-
-**Concepting:** `ro-writing`, `ro-balancing`, `ro-economy`, `ro-questdesign`, `ro-spec` (design-to-engineering handoff).
-
-**Engineering:** `ro-create-item`, `ro-create-mob`, `ro-create-quest`, `ro-source-modification`, `ro-client-files`.
-
-**Server:** `ro-serverops`, `ro-deployplan` (Linux VPS focus: systemd/Docker, MariaDB, firewall, backups).
-
-**Distribution:** Claude Code plugin, adapters for Codex, Cursor, Gemini CLI, Copilot.
+- Real-world test passes per skill; fix wrong file names and keys.
+- Verified-version notes in `runewright-shared` (which rAthena commit each reference was checked against).
+- Publish `@runewright/skills` to npm.
+- Claude Code plugin packaging; confirm each agent adapter path in the CLI.
+- Ideas: `ro-events`, `ro-map-design`, `ro-pvp-woe`, `ro-localization`.
