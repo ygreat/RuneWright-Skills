@@ -1,18 +1,21 @@
-# Rune*Wright Skills
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ygreat/RuneWright-Skills/main/RW-Skills-Icon.png" alt="Rune*Wright Skills" width="220">
+</p>
 
-[![npm](https://img.shields.io/npm/v/@runewright/skills)](https://www.npmjs.com/package/@runewright/skills)
-[![license](https://img.shields.io/npm/l/@runewright/skills)](https://github.com/ygreat/RuneWright-Skills/blob/main/LICENSE)
+<h1 align="center">Rune*Wright Skills</h1>
 
-**Agent skills for [rAthena](https://github.com/rathena/rathena) Ragnarok Online server development.**
-A designer x engineer partner for RO server owners and developers: it thinks
-like a game designer and solves problems like an engineer.
+<p align="center">
+  <a href="https://www.npmjs.com/package/@runewright/skills"><img src="https://img.shields.io/npm/v/@runewright/skills" alt="npm"></a>
+  <a href="https://github.com/ygreat/RuneWright-Skills/blob/main/LICENSE"><img src="https://img.shields.io/npm/l/@runewright/skills" alt="license"></a>
+</p>
 
-> **Status: early preview (v0.0.x).** 21 draft skills and the installer exist.
-> They are written from the rAthena docs and are being tested against real
-> checkouts; expect rough edges and please report them.
-> See the [roadmap](https://github.com/ygreat/RuneWright-Skills/blob/main/docs/ROADMAP.md).
+<p align="center">
+  <strong>Agent skills for <a href="https://github.com/rathena/rathena">rAthena</a> Ragnarok Online server development.</strong><br>
+  A designer x engineer partner for RO server owners and developers: it thinks
+  like a game designer and solves problems like an engineer.
+</p>
 
-Created by **Rune\*Wright Studio by ygreat**.
+<p align="center">Created by <strong>Rune*Wright Studio by ygreat</strong>.</p>
 
 ## What it is
 
